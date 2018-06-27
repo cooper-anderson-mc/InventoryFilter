@@ -40,12 +40,16 @@ public class FilterConfig {
 		public static boolean adventure = true;
 	}
 
+	public static void saveConfig() {
+		ConfigManager.sync(InventoryFilter.MODID, Config.Type.INSTANCE);
+	}
+
 	@Mod.EventBusSubscriber(modid = InventoryFilter.MODID)
 	private static class ConfigHandler {
 		@SubscribeEvent
 		public static void onConfigChanged(final ConfigChangedEvent.OnConfigChangedEvent event) {
 			if (event.getModID().equals(InventoryFilter.MODID)) {
-				ConfigManager.sync(InventoryFilter.MODID, Config.Type.INSTANCE);
+				saveConfig();
 			}
 		}
 	}
