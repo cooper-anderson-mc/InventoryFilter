@@ -9,7 +9,7 @@ In the config screen of the mod you can:
 
 The filter also allows for [Regular Expressions](https://en.wikipedia.org/wiki/Regular_expression), so you can filter items to your heart's content.
 
-## Reguirements
+## Requirements
  * Minecraft with Forge version `14.23.4.2713` or higher
 
 ## Installation
