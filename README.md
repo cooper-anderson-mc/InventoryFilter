@@ -16,6 +16,18 @@ The filter also allows for [Regular Expressions](https://en.wikipedia.org/wiki/R
  * It is recommended to install via the [Twitch Desktop App](https://app.twitch.tv/download)'s Minecraft mod manager
  * If for some reason you must install it manually, just drop the .jar file in the mods folder in your minecraft directory as usual
 
+## Contributing
+You are welcome to contribute in any way, whether it be bug reporting or pull requests. Here are the instructions on settings up a development environment for the mod:
+
+```bash
+# Clone the repository:
+git clone https://github.com/cooper-anderson-mc/InventoryFilter && cd InventoryFilter;
+# Setup Forge and decompile Minecraft:
+./gradlew setupDecompWorkspace;
+# Run Client when desired:
+./gradlew runClient;
+```
+
 ## Images
 ### Config Screen
 ![Config Screen](docs/config_screen.png?raw=true "test")
