@@ -1,0 +1,16 @@
+[
+{
+  "modid": "inventoryfilter",
+  "name": "Inventory Filter",
+  "description": "Filter your inventory to only allow specific items in adventure mode",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["titanknox"],
+  "credits": "Created by Cooper Anderson (cooper-anderson)",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
