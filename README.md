@@ -35,3 +35,5 @@ git clone https://github.com/cooper-anderson-mc/InventoryFilter && cd InventoryF
 ### Filter List Screen
 ![Filter List Screen](docs/filter_list.png?raw=true "test")
 
+## Modpacks
+You are free to include this mod in any modpack you wish.
