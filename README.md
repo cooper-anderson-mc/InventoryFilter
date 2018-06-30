@@ -1,4 +1,4 @@
-# InventoryFilter [![CircleCI](https://circleci.com/gh/cooper-anderson-mc/InventoryFilter.svg?style=svg)](https://circleci.com/gh/cooper-anderson-mc/InventoryFilter)
+# InventoryFilter [![CircleCI](https://circleci.com/gh/cooper-anderson-mc/InventoryFilter.svg?style=shield)](https://circleci.com/gh/cooper-anderson-mc/InventoryFilter) [![CurseForge](http://cf.way2muchnoise.eu/full_inventoryfilter_downloads.svg)](https://minecraft.curseforge.com/projects/inventoryfilter)
 InventoryFilter is a mod for Minecraft `1.12.2+`. It enables you to whitelist or blacklist your inventory to only allow certain items in.
 
 In the config screen of the mod you can:
