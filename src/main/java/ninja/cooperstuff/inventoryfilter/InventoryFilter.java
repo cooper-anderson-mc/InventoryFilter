@@ -37,7 +37,7 @@ public class InventoryFilter
 
     @EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-	    MinecraftForge.EVENT_BUS.register(new PickupHandler());
+	    MinecraftForge.EVENT_BUS.register(new FilterEventHandler());
     }
 
     public static boolean isItemAllowed(Item item) {
