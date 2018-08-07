@@ -2,7 +2,6 @@ package ninja.cooperstuff.inventoryfilter;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -41,7 +40,6 @@ public class InventoryFilter
     @EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
     	proxy.postInit(event);
-	    //MinecraftForge.EVENT_BUS.register(new FilterEventHandler());
     }
 
     @EventHandler
