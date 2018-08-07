@@ -5,11 +5,13 @@ import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import ninja.cooperstuff.inventoryfilter.command.FilterCommand;
+import ninja.cooperstuff.inventoryfilter.proxy.CommonProxy;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = InventoryFilter.MODID, name = InventoryFilter.NAME, version = InventoryFilter.VERSION)
@@ -17,28 +19,36 @@ public class InventoryFilter
 {
     public static final String MODID = "inventoryfilter";
     public static final String NAME = "Inventory Filter";
-    public static final String VERSION = "1.2";
+    public static final String VERSION = "1.2.1";
 
     public static Logger logger;
+
+    @SidedProxy(modId = MODID, clientSide = CommonProxy.CLIENT, serverSide = CommonProxy.SERVER)
+    private static CommonProxy proxy;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
+        proxy.preInit(event);
     }
 
     @EventHandler
-    public void init(FMLInitializationEvent event) { }
-
-	@EventHandler
-	public void serverStarting(FMLServerStartingEvent event) {
-		event.registerServerCommand(new FilterCommand());
-	}
+    public void init(FMLInitializationEvent event) {
+    	proxy.init(event);
+    }
 
     @EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-	    MinecraftForge.EVENT_BUS.register(new FilterEventHandler());
+    	proxy.postInit(event);
+	    //MinecraftForge.EVENT_BUS.register(new FilterEventHandler());
     }
+
+    @EventHandler
+	public void serverStarting(FMLServerStartingEvent event) {
+		InventoryFilter.logger.warn("command");
+		event.registerServerCommand(new FilterCommand());
+	}
 
     public static boolean isItemAllowed(Item item) {
     	String name = item.getRegistryName().toString();
